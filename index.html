@@ -173,55 +173,50 @@
       <!-- 
         - #ABOUT
       -->
-      
-      <section class="aboutsec" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-7 h-xs">
-                    <img src="assets/images/W9.jpg" alt="" class="fullwidth left-to-right play-on-scroll start">
-                </div>
-                <div class="col-5 col-xs-12 align-items-center">
-                    <div class="about-slogan right-to-left play-on-scroll start">
-                        <div class="content-box">
-                            <h4>OUR STORY</h4>
-                            <h3>
-                                Pioneers of Pizzas with <br>
-                                <span>2X Toppings & Symphony of flavors!!</span>
-                            </h3>
-                            <p>
-                              Indulge in a slice of heaven with our artisanal pizzas crafted to perfection. From  <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">Classic Margheritas</span> to exotic <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">Barbeque Chicken</span>, our pizzas promise to tantalize your taste buds and elevate your dining experience... &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">Double the toppings -- Double the delight</span>. Say goodbye to ordinary and hello to extraordinary with our <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">funky</span>, <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">quirky</span>, and <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">authentic</span> pizzas. Come join the flavor revolution at Spice Factory's Pizza!
-                          </p>
-                          
-                          
-                          
-                          
-                          
-                        </div>
+        
+  
+    <section class="aboutsec" id="about" onmouseover="moveImage()" onmouseleave="resetImage()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7 h-xs">
+                <img src="assets/images/W9.jpg" alt="" class="fullwidth left-to-right play-on-scroll start" id="movingImage">
+            </div>
+            <div class="col-5 col-xs-12 align-items-center">
+                <div class="about-slogan right-to-left play-on-scroll start">
+                    <div class="content-box">
+                        <h4>OUR STORY</h4>
+                        <h3>
+                            Pioneers of Pizzas with <br>
+                            <span>2X Toppings & Symphony of flavors!!</span>
+                        </h3>
+                        <p>
+                          Indulge in a slice of heaven with our artisanal pizzas crafted to perfection. From  <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">Classic Margheritas</span> to exotic <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">Barbeque Chicken</span>, our pizzas promise to tantalize your taste buds and elevate your dining experience... &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">Double the toppings -- Double the delight</span>. Say goodbye to ordinary and hello to extraordinary with our <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">funky</span>, <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">quirky</span>, and <span style="color: #FFA500; text-decoration: underline; text-decoration-color: #FFA500; text-decoration-style: dashed; text-decoration-thickness: 2px; text-decoration-skip-ink: none; display: inline-block; padding-bottom: 2px; margin-bottom: 2px;">authentic</span> pizzas. Come join the flavor revolution at Spice Factory's Pizza!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
 
-    
-
-    <script>
-     
-      window.addEventListener('scroll', function() {
-          var aboutSection = document.getElementById('about');
-          var aboutSectionPosition = aboutSection.getBoundingClientRect().top;
-          var windowHeight = window.innerHeight;
-
-          if (aboutSectionPosition < windowHeight / 2) {
-              aboutSection.style.display = 'block';
-          }
-      });
-  </script> 
+<script>
+  function moveImage() {
+    var movingImage = document.getElementById('movingImage');
+    movingImage.style.transition = 'transform 0.5s ease-in-out';
+    movingImage.style.transform = 'translateX(0%)'; // Move to leftmost position
+  }
+</script>
 
 
-  
 
+<script>
+  function resetImage() {
+    var movingImage = document.getElementById('movingImage');
+    movingImage.style.transition = 'transform 0.5s ease-in-out';
+    movingImage.style.transform = 'translateX(-100%)'; // Move back to the leftmost position
+  }
+</script>
 
       <!-- 
         - #PROMO
@@ -256,7 +251,7 @@
                   Food is any substance consumed to provide nutritional support for an organism.
                 </p>
 
-                <img src="./assets/images/W4.jpg" width="300" height="300" loading="lazy" alt="Maxican Pizza"
+                <img src="./assets/images/pizza.png" width="300" height="200" loading="lazy" alt="Maxican Pizza"
                   class="w-100 card-banner">
 
               </div>
@@ -286,7 +281,7 @@
                   Food is any substance consumed to provide nutritional support for an organism.
                 </p>
 
-                <img src="./assets/images/promo-2.png" width="300" height="300" loading="lazy" alt="Soft Drinks"
+                <img src="./assets/images/cock1.png" width="300" height="200" loading="lazy" alt="Soft Drinks"
                   class="w-100 card-banner">
 
               </div>
@@ -316,7 +311,7 @@
                   Food is any substance consumed to provide nutritional support for an organism.
                 </p>
 
-                <img src="./assets/images/promo-3.png" width="300" height="300" loading="lazy" alt="French Fry"
+                <img src="./assets/images/file (10).png" width="300" height="200" loading="lazy" alt="French Fry"
                   class="w-100 card-banner">
 
               </div>
@@ -347,7 +342,7 @@
                   Food is any substance consumed to provide nutritional support for an organism.
                 </p>
 
-                <img src="./assets/images/promo-4.png" width="300" height="300" loading="lazy" alt="Burger Kingo"
+                <img src="./assets/images/purepng.com-burgersandwhichfoodbreadcaviarburgerdelicious-21526117698ci2tq.png" width="300" height="200" loading="lazy" alt="Burger Kingo"
                   class="w-100 card-banner">
 
               </div>
@@ -372,13 +367,13 @@
                   </svg>
                 </div>
 
-                <h3 class="h3 card-title">Chicken Masala</h3>
+                <h3 class="h3 card-title">Momos</h3>
 
                 <p class="card-text">
                   Food is any substance consumed to provide nutritional support for an organism.
                 </p>
 
-                <img src="./assets/images/promo-5.png" width="300" height="300" loading="lazy" alt="Chicken Masala"
+                <img src="./assets/images/file (4).png" width="300" height="200" loading="lazy" alt="Chicken Masala"
                   class="w-100 card-banner">
 
               </div>
@@ -401,53 +396,25 @@
         <div class="container">
 
           <div class="about-banner">
-            <img src="./assets/images/about-banner.png" width="509" height="459" loading="lazy" alt="Burger with Drinks"
+            <img src="./assets/images/bb3.jpeg" width="509" height="459" loading="lazy" alt="Burger with Drinks"
               class="w-100 about-img">
 
-            <img src="./assets/images/sale-shape-red.png" width="216" height="226" alt="get up to 50% off now"
+            <img src="" width="0" height="0" alt=""
               class="abs-img scale-up-anim">
           </div>
 
           <div class="about-content">
 
             <h2 class="h2 section-title">
-              Caferio, Burgers, and Best Pizzas
+              INDIA’S LARGEST HOME-GROWN BURGER CHAIN IS HERE TO SERVE YOU.
               <span class="span">in Town!</span>
             </h2>
 
             <p class="section-text">
-              The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during
-              the Jurchen
-              invasion of the 1120s, while it is also known that many restaurants were run by families.
+              We know you’re obviously a fan of desi flavours and have your heart set on it. Your search for the best Indian fusion burgers ends here. With the taste of India in every bite, we have thoughtfully curated our menu to serve the Indian palette. Bursting with flavours, our wide range will always make you crave for more. 
+
+
             </p>
-
-            <ul class="about-list">
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">Delicious & Healthy Foods</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">Spacific Family And Kids Zone</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">Music & Other Facilities</span>
-              </li>
-
-              <li class="about-item">
-                <ion-icon name="checkmark-outline"></ion-icon>
-
-                <span class="span">Fastest Food Home Delivery</span>
-              </li>
-
-            </ul>
 
             <button class="btn btn-hover">Order Now</button>
 
@@ -456,10 +423,41 @@
         </div>
       </section>
 
+      <section class="image-section">
+        <img src="./assets/images/Screenshot 2024-05-13 at 1.13.03 PM.png" class="section-image">
+    </section>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
       <!-- 
         - #FOOD MENU
       -->
@@ -743,6 +741,226 @@
         </div>
       </section>
 
+<section> 
+
+  <div class="box-container">
+    <div class="box1">BHAI NI HAI</div>
+  </div>                           
+
+
+  <div class="image-container">
+    <a class="" data-toggle="tab" href="#burgers" role="tab" aria-controls="burgers" aria-selected="false" onclick="toggleMenu('burgers')">
+      <img decoding="async" src="//wataburger.in/wp-content/uploads/2022/09/WAB-Homepage-Menu-Icons-1.png" class="img-fluid" alt="Burgers">
+      <p>Burgers</p>
+    </a>
+    <a class="" data-toggle="tab" href="#wraps-and-sandwiches" role="tab" aria-controls="wraps-and-sandwiches" aria-selected="false" onclick="toggleMenu('wraps-and-sandwiches')">
+      <img decoding="async" src="//wataburger.in/wp-content/uploads/2022/09/WAB-Homepage-Menu-Icons-2.png" class="img-fluid" alt="Wraps And Sandwiches">
+      <p>Wraps And Sandwiches</p>
+    </a>
+    <a class="" data-toggle="tab" href="#signature" role="tab" aria-controls="signature" aria-selected="false" onclick="toggleMenu('signature')">
+      <img decoding="async" src="//wataburger.in/wp-content/uploads/2022/09/My-project-1-1.png" class="img-fluid" alt="Signature">
+      <p>Signature</p>
+    </a>
+    <a class="" data-toggle="tab" href="#sides" role="tab" aria-controls="sides" aria-selected="false" onclick="toggleMenu('sides')">
+      <img decoding="async" src="//wataburger.in/wp-content/uploads/2022/09/WAB-Homepage-Menu-Icons-4.png" class="img-fluid" alt="Sides">
+      <p>Sides</p>
+    </a>
+    <a class="" data-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false" onclick="toggleMenu('desserts')">
+      <img decoding="async" src="//wataburger.in/wp-content/uploads/2022/09/WAB-Homepage-Menu-Icons-6.png" class="img-fluid" alt="Desserts">
+      <p>Desserts</p>
+    </a>
+    <a class="active show" data-toggle="tab" href="#beverages" role="tab" aria-controls="beverages" aria-selected="true" onclick="toggleMenu('beverages')">
+      <img decoding="async" src="//wataburger.in/wp-content/uploads/2022/09/WAB-Homepage-Menu-Icons-5.png" class="img-fluid" alt="Beverages">
+      <p>Beverages</p>
+    </a>
+  </div>
+  
+  <div id="burgers" class="menu">
+    <div class="menu-column">
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Fantastic Slider: <span class="menu-price">₹39/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Wild Potato Burger: <span class="menu-price">₹239/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Crunchy Aloo Slider: <span class="menu-price">₹59/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Cheesy Salsa Delight Slider: <span class="menu-price">₹89/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Aloo Achari Burger: <span class="menu-price">₹89/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Aloo Bechara Burger: <span class="menu-price">₹99/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-veg">Veg</span> Desi Street 2.0! Burger: <span class="menu-price">₹99/-</span>
+      </div>
+    </div>
+    <div class="menu-column">
+      <div class="menu-item">
+        <span class="menu-nonveg">Non-Veg</span> Chicken Fantastic Slider: <span class="menu-price">₹79/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-nonveg">Non-Veg</span> Chicken Salsa Slider: <span class="menu-price">₹89/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-nonveg">Non-Veg</span> Butter Egg Burger: <span class="menu-price">₹79/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-nonveg">Non-Veg</span> Chicken Surprise Burger: <span class="menu-price">₹169/-</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-nonveg">Non-Veg</span> Grilled Mutton Kebab Burger: <span class="menu-price">₹149/-</span>
+      </div>
+    </div>
+  </div>
+  
+  <div id="wraps-and-sandwiches" class="menu">
+    <div class="menu-column">
+      <div class="menu-item">
+        Veggie Fajita Wrap<span class="menu-price">₹149/-</span>
+      </div>
+      <div class="menu-item">
+        Veg Jalapeno Cheese Wrap<span class="menu-price">₹149/-</span>
+      </div>
+      <div class="menu-item">
+        Veggie Paneer Wrap<span class="menu-price">₹149/-</span>
+      </div>
+      <div class="menu-item">
+        Mexican Cottage Cheese Sandwich<span class="menu-price">₹159/-</span>
+      </div>
+      <div class="menu-item">
+        BBQ Paneer Sandwich<span class="menu-price">₹159/-</span>
+      </div>
+      <div class="menu-item">
+        Bombay Toasat Sandwich<span class="menu-price">₹159/-</span>
+      </div>
+      <div class="menu-item">
+        Cheese Chicken Wrap<span class="menu-price">₹169/-</span>
+      </div>
+      <div class="menu-item">
+        Mutton Kebab Juicy Wrap<span class="menu-price">₹169/-</span>
+      </div>
+      <div class="menu-item">
+        BBQ Chicken Sandwich<span class="menu-price">₹179/-</span>
+      </div>
+      <div class="menu-item">
+        Tandoori Chicken Sandwich<span class="menu-price">₹179/-</span>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div id="signature" class="menu">
+    <div class="menu-column">
+      <div class="menu-column">
+        <div class="menu-item">Steamed Veg Momos (6 pcs) <span class="menu-price">₹99/-</span></div>
+        <div class="menu-item">Steamed Chicken Momos (6 pcs) <span class="menu-price">₹119/-</span></div>
+        <div class="menu-item">Fried Veg Momos (6 pcs) <span class="menu-price">₹109/-</span></div>
+        <div class="menu-item">Fried Chicken Momos (6 pcs) <span class="menu-price">₹129/-</span></div>
+        <div class="menu-item">Paneer Dumplings (4 pcs) <span class="menu-price">₹119/-</span></div>
+        <div class="menu-item">Pork Dumplings (4 pcs) <span class="menu-price">₹139/-</span></div>
+        <div class="menu-item">Vegetable Dim Sum (3 pcs) <span class="menu-price">₹109/-</span></div>
+        <div class="menu-item">Prawn Dumplings (4 pcs) <span class="menu-price">₹149/-</span></div>
+        <div class="menu-item">Spinach and Tofu Dumplings (4 pcs) <span class="menu-price">₹129/-</span></div>
+        <div class="menu-item">Lamb Dumplings (4 pcs) <span class="menu-price">₹149/-</span></div>
+        <div class="menu-item">Cheese and Corn Dumplings (4 pcs) <span class="menu-price">₹129/-</span></div>
+        <div class="menu-item">Shrimp Dumplings (4 pcs) <span class="menu-price">₹149/-</span></div>
+        <div class="menu-item">Mixed Veggie Dumplings (4 pcs) <span class="menu-price">₹119/-</span></div>
+      </div>
+      <p>*All prices are in Indian rupee excluding GST</p>
+  
+    </div>
+  </div>
+  
+  <div id="sides" class="menu">
+    <div class="menu-column">
+      <div class="menu-item">French Fries (small) <span class="menu-price">₹89/-</span></div>
+      <div class="menu-item">French Fries (large) <span class="menu-price">₹119/-</span></div>
+      <div class="menu-item">French Fries (peri-peri) <span class="menu-price">₹179/-</span></div>
+      <div class="menu-item">Pizza Pockets (3 pcs) <span class="menu-price">₹109/-</span></div>
+      <div class="menu-item">Choose Any Dip - Cheese, Peri-Peri, Desi-Tadka <span class="menu-price">₹25/-</span></div>
+      <div class="menu-item">Onion Rings (4 pcs) <span class="menu-price">₹109/-</span></div>
+      <div class="menu-item">Choice Of Seasoning - Achari Nimbu, Peri-Peri, Jalapeno Cheese <span class="menu-price">₹15/-</span></div>
+      <div class="menu-item">Cheese Coins (4 pcs) <span class="menu-price">₹109/-</span></div>
+      <div class="menu-item">Cheese Loaded Fries <span class="menu-price">₹179/-</span></div>
+      <div class="menu-item">Indian Chaat Fries <span class="menu-price">₹199/-</span></div>
+      <div class="menu-item">Crunchy Chicken Strips (3 pcs) <span class="menu-price">₹129/-</span></div>
+      <div class="menu-item">Crunchy Chicken Strips (6 pcs) <span class="menu-price">₹209/-</span></div>
+      <div class="menu-item">Crunchy Chicken Strips (12 pcs) <span class="menu-price">₹309/-</span></div>
+      <div class="menu-item">Chicken Nuggets (4 pcs) <span class="menu-price">₹119/-</span></div>
+      <div class="menu-item">SIGNATURE Truffle Cheese Fries <span class="menu-price">₹199/-</span></div>
+      <div class="menu-item">SIGNATURE Sriracha Hinted Cheesy Fries <span class="menu-price">₹199/-</span></div>
+    </div>
+    <p>*All prices are in Indian rupee excluding GST</p>
+  
+  </div>
+  
+  <div id="desserts" class="menu">
+    <div class="menu-column">
+      <div class="menu-column">
+        <div class="menu-item">Margherita Pizza <span class="menu-price">₹199/-</span></div>
+        <div class="menu-item">Classic Pepperoni Pizza <span class="menu-price">₹249/-</span></div>
+        <div class="menu-item">Vegetarian Supreme Pizza <span class="menu-price">₹249/-</span></div>
+        <div class="menu-item">BBQ Chicken Pizza <span class="menu-price">₹269/-</span></div>
+        <div class="menu-item">Hawaiian Pizza <span class="menu-price">₹269/-</span></div>
+        <div class="menu-item">Mushroom and Olive Pizza <span class="menu-price">₹259/-</span></div>
+        <div class="menu-item">Paneer Tikka Pizza <span class="menu-price">₹259/-</span></div>
+        <div class="menu-item">Farmhouse Pizza <span class="menu-price">₹269/-</span></div>
+        <div class="menu-item">Spicy Chicken Pizza <span class="menu-price">₹279/-</span></div>
+        <div class="menu-item">Mexican Fiesta Pizza <span class="menu-price">₹279/-</span></div>
+        <div class="menu-item">Four Cheese Pizza <span class="menu-price">₹289/-</span></div>
+        <div class="menu-item">Paneer Makhani Pizza <span class="menu-price">₹289/-</span></div>
+        <div class="menu-item">Seafood Delight Pizza <span class="menu-price">₹299/-</span></div>
+        <div class="menu-item">Gourmet Veggie Pizza <span class="menu-price">₹299/-</span></div>
+        <div class="menu-item">Tandoori Chicken Pizza <span class="menu-price">₹309/-</span></div>
+      </div>
+      <p>*All prices are in Indian rupee excluding GST</p>
+  
+    </div>
+  </div>
+  
+  <div id="beverages" class="menu">
+    <div class="menu-column">
+      <div class="menu-column">
+        <div class="menu-item">Virgin Mojito <span class="menu-price">₹99/-</span></div>
+        <div class="menu-item">Pina Colada <span class="menu-price">₹129/-</span></div>
+        <div class="menu-item">Watermelon Cooler <span class="menu-price">₹109/-</span></div>
+        <div class="menu-item">Mango Tango Shake <span class="menu-price">₹139/-</span></div>
+        <div class="menu-item">Strawberry Smoothie <span class="menu-price">₹119/-</span></div>
+        <div class="menu-item">Banana Blast Shake <span class="menu-price">₹129/-</span></div>
+        <div class="menu-item">Blue Lagoon Mocktail <span class="menu-price">₹109/-</span></div>
+        <div class="menu-item">Kiwi Kiss Mocktail <span class="menu-price">₹119/-</span></div>
+        <div class="menu-item">Chocolate Indulgence Shake <span class="menu-price">₹149/-</span></div>
+        <div class="menu-item">Minty Fresh Mocktail <span class="menu-price">₹99/-</span></div>
+        <div class="menu-item">Caramel Dream Shake <span class="menu-price">₹139/-</span></div>
+        <div class="menu-item">Lemon Berry Cooler <span class="menu-price">₹119/-</span></div>
+        <div class="menu-item">Green Apple Fizz Mocktail <span class="menu-price">₹109/-</span></div>
+        <div class="menu-item">Choco-Nut Shake <span class="menu-price">₹129/-</span></div>
+        <div class="menu-item">Mango Madness Cooler <span class="menu-price">₹129/-</span></div>
+      </div>
+      <p>*All prices are in Indian rupee excluding GST</p>
+  
+    </div>
+  </div>
+  
+  
+  <script>
+  function toggleMenu(menuId) {
+    var menus = document.querySelectorAll('.menu');
+    menus.forEach(function(menu) {
+      menu.style.display = 'none';
+    });
+  
+    var menuToShow = document.getElementById(menuId);
+    menuToShow.style.display = 'block';
+  }
+  </script>
+        
+
 
 
       <!--
@@ -845,8 +1063,7 @@
             <img src="./assets/images/cta-banner.png" width="700" height="637" loading="lazy" alt="Burger"
               class="w-100 cta-img">
 
-            <img src="./assets/images/sale-shape.png" width="216" height="226" loading="lazy"
-              alt="get up to 50% off now" class="abs-img scale-up-anim">
+            
           </figure>
 
         </div>
@@ -1439,7 +1656,7 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/script.js" defer></scrip>
 
   <!-- 
     - ionicon link
