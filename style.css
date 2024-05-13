@@ -110,17 +110,8 @@ a {
   color: inherit;
 }
 
-a,
-img,
-svg,
-span,
-input,
-select,
-button,
-textarea,
-ion-icon { display: block; }
 
-img { height: auto; }
+
 
 input,
 select,
@@ -168,9 +159,9 @@ body.active { overflow: hidden; }
 
 ::-webkit-scrollbar-track { background-color: var(--cultured); }
 
-::-webkit-scrollbar-thumb { background-color: var(--deep-saffron); }
+::-webkit-scrollbar-thumb { background-color: #F83D5C}
 
-::-webkit-scrollbar-thumb:hover { background-color: var(--tangerine); }
+::-webkit-scrollbar-thumb:hover { background-color: #F83D5C; }
 
 
 
@@ -265,7 +256,7 @@ body.active { overflow: hidden; }
   gap: 10px;
   overflow-x: auto;
   scroll-snap-type: inline mandatory;
-  padding-block-end: 40px;
+  padding-block-end: 30px;
 }
 
 .has-scrollbar::-webkit-scrollbar { height: 12px; }
@@ -273,7 +264,7 @@ body.active { overflow: hidden; }
 .has-scrollbar::-webkit-scrollbar-button { width: calc(25% - 40px); }
 
 .has-scrollbar::-webkit-scrollbar-track {
-  outline: 2px solid var(--deep-saffron);
+  outline: 2px solid #F83D5C;
   border-radius: 50px;
 }
 
@@ -287,17 +278,8 @@ body.active { overflow: hidden; }
   color: var(--deep-saffron);
 }
 
-.abs-img {
-  position: absolute;
-  transform: scale(1);
-}
 
-.scale-up-anim { animation: scaleUp 1s linear infinite alternate; }
 
-@keyframes scaleUp {
-  0% { transform: scale(1);}
-  100% { transform: scale(1.05); }
-}
 
 .section-subtitle {
   color: var(--cinnabar);
@@ -543,6 +525,11 @@ body.active { overflow: hidden; }
   margin-block-end: 25px;
 }
 
+.move-center {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(50%);
+}
+
 .hero-title {
   color: var(--champagne-pink);
   max-width: 12ch;
@@ -552,7 +539,7 @@ body.active { overflow: hidden; }
 .hero-text {
   color: var(--desert-sand);
   margin-block: 15px 30px;
-  max-width: 44ch;
+  max-width: 54ch;
   margin-inline: auto;
 }
 
@@ -694,7 +681,7 @@ body.active { overflow: hidden; }
 
 .promo-card {
   position: relative;
-  background-color: var(--white);
+  background-color: rgb(140, 222, 249);
   text-align: center;
   padding: 40px 30px;
   box-shadow: var(--shadow-2);
@@ -705,7 +692,7 @@ body.active { overflow: hidden; }
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--deep-saffron);
+  background-color: rgb(248, 61, 92);
   clip-path: var(--clip-path-1);
   transform: scaleY(0.3);
   transform-origin: bottom;
@@ -774,12 +761,7 @@ body.active { overflow: hidden; }
   }
 }
 
-#about img {
-  border-radius: 2rem;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-  transition: transform 1s ease-in-out; /* Add transition property */
-  transform: translateX(-100%); /* Initial position off-screen */
-}
+
 
 .content-box {
   background-color: white; /* Set background color to white */
@@ -813,11 +795,6 @@ body.active { overflow: hidden; }
   color: #F5791E /* Set color of "2X Toppings" to orange */
 }
 
-
-
-#about:hover img {
-  transform: translateX(0); 
-}
 
 #about:hover .content-box {
   transform: translateX(0); 
@@ -1101,11 +1078,6 @@ p {
 }
 
 .cta-img { transform: scale(1.3) translateY(60px); }
-
-.cta-banner .abs-img {
-  top: 50px;
-  left: 10px;
-}
 
 
 
@@ -1889,7 +1861,7 @@ textarea.input-field {
 
   .cta-img { transform: scale(1.4) translate(20px, 40px); }
 
-  .cta-banner .abs-img { left: -50px; }
+
 
   :is(.cta, .delivery) .section-title { line-height: 1.2; }
 
@@ -2123,3 +2095,246 @@ h3 {
 
 
 
+
+
+
+
+.image-section {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  width: 100%; /* Ensures the section takes full width of its container */
+  height: auto; /* Allows the height to adjust according to the image */
+}
+
+.section-image {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block; /* Ensures the image behaves as a block element */
+  width: 100%; /* Makes the image fill the width of its container */
+  height: auto; /* Allows the height to adjust according to the image's aspect ratio */
+  transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  box-sizing: border-box;
+  color: rgb(229, 90, 35);
+  cursor: default;
+  display: block;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 90px;
+  font-weight: 600; /* Adjust as needed */
+  text-align: 3px solid rgb(229, 90, 35); /* Same color as text */
+  text-decoration-color: rgb(229, 90, 35);
+text-shadow:rgb(229, 90, 35) ;
+  padding: 5px; /* Adjust padding as needed */
+  height: 128px;
+  line-height: 64px;
+  margin-block-end: 20px;
+  margin-block-start: 0px;
+  margin-bottom: 20px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-top: 0px;
+  text-align: center;
+  text-size-adjust: 100%;
+  unicode-bidi: isolate;
+  width: 582px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+ 
+}
+
+.image-container a {
+  text-align: center;
+  flex: 1;
+
+}
+
+.image-container img {
+  width: 140px;
+
+  
+  /* Adjust image width as needed */
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 130px;
+  margin-top: 50px;
+}
+
+.menu {
+  display: none;
+  /* Hide all menu items by default */
+}
+
+#beverages {
+  display: block;
+  /* Display burger menu by default */
+}
+
+.menu-column {
+  flex: 0 0 48%;
+  /* Set the width of each column */
+  margin-bottom: 20px;
+  /* Add margin for spacing */
+}
+
+.menu-item {
+  width: calc(50% - 10px);
+  /* Set the width for 6 items in each column */
+  margin-bottom: 10px;
+
+}
+
+.menu-column:nth-child(2n) .menu-item {
+  margin-left: 10px;
+  /* Add spacing between two columns */
+}
+
+.menu-item::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-price {
+  color: orange;
+  margin-left: 10px;
+}
+
+.menu-disclaimer {
+  margin-left: 150px;
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+#burgers .menu-column:nth-child(1) {
+  margin-right: 20px;  /* Add margin to separate columns */
+}
+
+#burgers .menu-column {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+#burgers .menu-item {
+  text-align: justify;
+  width: calc(50% - 10px);
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#burgers .menu-column:nth-child(2n) .menu-item {
+  margin-left: 10px;
+}
+
+#wraps-and-sandwiches .menu-column {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+#wraps-and-sandwiches .menu-item {
+  text-align: justify;
+  margin-bottom: 10px; 
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(50% - 10px);
+  
+}
+
+#signature .menu-column {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+#signature .menu-item {
+  text-align: justify;
+  margin-bottom: 10px; 
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(50% - 10px);
+}
+.menu-price {
+  color: orange;
+  margin-left: 10px;
+}
+
+#sides .menu-column {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+#sides .menu-item {
+  text-align: justify;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(50% - 10px);
+}
+
+#beverages .menu-column {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+#beverages .menu-item {
+  text-align: justify;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(50% - 10px);
+  letter-spacing: -0.5px; /* Adjust the letter spacing as needed */
+}
+
+#desserts .menu-column {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+#desserts .menu-item {
+  text-align: justify;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(50% - 10px);
+  letter-spacing: -0.5px; /* Adjust the letter spacing as needed */
+}
